@@ -88,22 +88,40 @@ li a:hover {
 		<h2> Enjoy!
 <a/>
 <font color="red"><h1> Picture Modification </h1>
-	.card {
+<html lang="en">
+<head>
+<title>Image Swap on Hover with CSS</title>
+<style type="text/css">
+    .card {
         width: 130px;
         height: 195px;
-        background: url("images/dog.jpg") no-repeat;
+        position: relative;
         display: inline-block;
     }
-    .card:hover {
-        background: url("images/figure_3.jpg") no-repeat;
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
     }
-<font color="black"><h2> As we moved on in Python, Our group
-	<h2> has created a Guess The Lyric Game.
-	<h2> All the user has to do is guess the lyrics right
-	<h2> and move on to the next level.
-	<h2> To play the game, click on the image.
-	<h2> A link will start downloading.
-		<h2> Enjoy!
+    .card:hover .img-top {
+        display: inline;
+    }
+</style>
+</head>
+<body>
+    <div class="card">
+        <img src="images/dog.jpg" alt="Card Back">
+        <img src="images/figure_3.jpg" class="img-top" alt="Card Front">
+    </div>
+</body>
+</html>
+<font color="black"><h2> As we continued with python,
+	<h2> we started learning how to modify
+	<h2> pictures with Canopy.
+	<h2> Hover over the picture to see the changes
+	<h2> made to the image.
 	  </body>
 	</html>
 
